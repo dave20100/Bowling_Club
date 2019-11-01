@@ -1,6 +1,21 @@
-**Wymiary pomieszczenia:** 30x5x3m
+# Projekt Grafika 3-D i systemy multimedialne #
+Projekt kręgielni, tworzony przy pomocy Unity.
 
-**Wymiary toru**(tak jak na pdf) doprecyzowania na wiki:
+**Przydatne linki:**
+
+[https://drive.google.com/drive/folders/1E9FsL5vFS2DxAgMVikVrV2Xn1morTRTA?usp=sharing](https://drive.google.com/drive/folders/1E9FsL5vFS2DxAgMVikVrV2Xn1morTRTA?usp=sharing "GDrive")
+
+[http://www.bowlingcentrum.pl/wp-content/uploads/2018/02/Bowling-2-torowy-wymiary.pdf](http://www.bowlingcentrum.pl/wp-content/uploads/2018/02/Bowling-2-torowy-wymiary.pdf "Tor pdf")
+
+[https://www.youtube.com/watch?v=Eu24gIbPXoY&feature=share](https://www.youtube.com/watch?v=Eu24gIbPXoY&feature=share "youtube")
+
+----------
+
+**Wymiary pomieszczenia:** 
+
+30x5x3m
+
+**Wymiary toru**(pdf oraz wiki):
 
     https://en.wikipedia.org/wiki/Ten-pin_bowling
 - 18m parkietu
