@@ -13,7 +13,7 @@ Projekt kręgielni, tworzony przy pomocy Unity.
 
 **Wymiary pomieszczenia:** 
 
-30x5x3m
+30x6x3m
 
 **Wymiary toru**(pdf oraz wiki):
 
