@@ -94,7 +94,25 @@ public class FreeCam : MonoBehaviour
             transform.position = transform.position + (-Vector3.up * movementSpeed * Time.deltaTime);
         }
 
-	if (Input.GetKey(KeyCode.Escape))
+        var xboxAxisX = Input.GetAxis("XboxHorizontal");
+        if (xboxAxisX != 0)
+        {
+            transform.position = transform.position + (transform.right * movementSpeed * Time.deltaTime * xboxAxisX);
+        }
+
+        var xboxAxisY = Input.GetAxis("XboxVertical");
+        if (xboxAxisY != 0)
+        {
+            transform.position = transform.position + (transform.up * movementSpeed * Time.deltaTime * xboxAxisY);
+        }
+
+        var xboxAxisZ = Input.GetAxis("XboxAxisZ");
+        if (xboxAxisZ != 0)
+        {
+            transform.position = transform.position + (transform.forward * movementSpeed * Time.deltaTime * xboxAxisZ);
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
     	{
             Application.Quit();
     	}
@@ -112,6 +130,17 @@ public class FreeCam : MonoBehaviour
             var zoomSensitivity = fastMode ? this.fastZoomSensitivity : this.zoomSensitivity;
             transform.position = transform.position + transform.forward * axis * zoomSensitivity;
         }
+
+        var xboxHorizontal = Input.GetAxis("XboxHorizontal2");
+        var xboxVertical = Input.GetAxis("XboxVertical2");
+        if (xboxHorizontal != 0 || xboxVertical != 0)
+        {
+            float newRotationX = transform.localEulerAngles.y + xboxHorizontal * freeLookSensitivity;
+            float newRotationY = transform.localEulerAngles.x - xboxVertical * freeLookSensitivity;
+            transform.localEulerAngles = new Vector3(newRotationY, newRotationX, 0f);
+        }
+
+   
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
