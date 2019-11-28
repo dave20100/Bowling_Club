@@ -60,7 +60,15 @@ Musimy pokazać pomieszczenie z wszystkimi ścianami i sufitem. Fajnie byłoby m
 **03.12.2019 - Drugi punkt kontrolny:**
 
 
-- Proponuję powiększyć pomieszczenie, wiąże się z tym powiększenie każdej ze ścian. Czy zgadzacie się? Jeśli tak to proponuję wymiary: 30x12x3.5m i 7 torów(środkowy gra)?
+- Proponuję powiększyć pomieszczenie, wiąże się z tym powiększenie każdej ze ścian. Czy zgadzacie się? Jeśli tak to proponuję wymiary: 
+
+30x12x3.5m i 7 torów(środkowy gra)
+
+lub
+
+30x15x3.5m i 9 torów(środkowy gra)
+
+Tak duża przestrzeń wymagałaby by powielenie kanap i stolików ale myślę ze to najmniejszy problem.
 
 
 - Poprzednio Nikodem sugerował że pomieszczenie wygląda jak 'nora'- chyba chodziło o to że jest długa i wąska, zmiana wielkości powinna załatwić problem, ale jeśli nie to możemy pomyśleć też o zmianie teksturek na ścianach. Jeśli komuś jakaś ciekawa wpadnie w ręce to dajcie znać.
