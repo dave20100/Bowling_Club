@@ -13,7 +13,7 @@ Projekt kręgielni, tworzony przy pomocy Unity.
 
 **Wymiary pomieszczenia:** 
 
-30x6x3m
+30x12x3.5m
 
 **Wymiary toru**(pdf oraz wiki):
 
@@ -54,3 +54,37 @@ Projekt kręgielni, tworzony przy pomocy Unity.
 
 
 Musimy pokazać pomieszczenie z wszystkimi ścianami i sufitem. Fajnie byłoby mieć 'tor' czyli na chwilę obecną kawałek podłogi w innej teksturze gdzie na końcu będzie jakaś dziura gdzie stoją 'jakoś' kręgle, na początku toru stoi nieruchoma kula. -Taka scena według mnie wyczerpuje definicję draftu na początku pracy
+
+**03.12.2019 - Drugi punkt kontrolny:**
+
+
+- Proponuję powiększyć pomieszczenie, wiąże się z tym powiększenie każdej ze ścian. Czy zgadzacie się? Jeśli tak to proponuję wymiary: 30x12x3.5m i 7 torów(środkowy gra)?
+
+
+- Poprzednio Nikodem sugerował że pomieszczenie wygląda jak 'nora'- chyba chodziło o to że jest długa i wąska, zmiana wielkości powinna załatwić problem, ale jeśli nie to możemy pomyśleć też o zmianie teksturek na ścianach. Jeśli komuś jakaś ciekawa wpadnie w ręce to dajcie znać.
+
+
+- Mamy problem z repem, umie ktoś to mergować w unity? Jeśli nie, to proponuje pracować małymi etapami pracy i w miarę często commitować. Ja rzut kulą zrobię w kompletnie innym projekcie pewnie a później to przeniosę
+
+
+- Czy komuś jeszcze w unity nie działa .gitignore i chce wrzucać wszystkie śmieciowe pliki
+
+- Czego używamy starszej wersji unity? ( nie chce już jej zmieniac po prostu tak się pytam bo nie wiem czy to ma jakieś zyski)
+
+**Wypada mieć (Generalnie to prawie wszytko):**
+
+- Moduł rzutu, ustawianie kręgli
+
+- Światło, oświetlenie
+
+- Ściany, tor i wszystkie meble 
+
+- okna, firanki
+
+- kamery
+
+**Ważne niezapisanych rzeczy:**
+
+- fizyka kręgli, zachowania kula-tor, kula-kręgle, kręgle-tor
+
+- mechanizm zwrotu, ustawiania kul
