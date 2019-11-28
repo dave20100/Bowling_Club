@@ -62,11 +62,15 @@ Musimy pokazać pomieszczenie z wszystkimi ścianami i sufitem. Fajnie byłoby m
 
 - Proponuję powiększyć pomieszczenie, wiąże się z tym powiększenie każdej ze ścian. Czy zgadzacie się? Jeśli tak to proponuję wymiary: 
 
-30x12x3.5m i 7 torów(środkowy gra)
+Zestaw dwóch torów ma 3.14 więc: 3 x zestaw = 9,42, 4 x zestaw = 12.56, 5 x zestaw = 15.7
 
-lub
+Więc jaka szerokość:
 
-30x15x3.5m i 9 torów(środkowy gra)
+- 3 zestawy 30x10x3.5m
+
+- 4 zestawy 30x13x3.5m
+
+- 5 zestawów 30x16x3.5m
 
 Tak duża przestrzeń wymagałaby by powielenie kanap i stolików ale myślę ze to najmniejszy problem.
 
