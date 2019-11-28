@@ -55,6 +55,8 @@ Projekt kręgielni, tworzony przy pomocy Unity.
 
 Musimy pokazać pomieszczenie z wszystkimi ścianami i sufitem. Fajnie byłoby mieć 'tor' czyli na chwilę obecną kawałek podłogi w innej teksturze gdzie na końcu będzie jakaś dziura gdzie stoją 'jakoś' kręgle, na początku toru stoi nieruchoma kula. -Taka scena według mnie wyczerpuje definicję draftu na początku pracy
 
+----------
+
 **03.12.2019 - Drugi punkt kontrolny:**
 
 
