@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 40
+  controlID: 32
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 41
+  controlID: 13
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 42
+  controlID: 14
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -342,14 +342,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Materials
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Shasarel\Bowling
+  m_LastProjectPath: C:\Users\Shasarel\Desktop\Bowling_git\Bowling_Club\Bowling
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d4280000
-    m_LastClickedID: 10452
-    m_ExpandedIDs: 0000000036270000da2d000000ca9a3b
+    m_SelectedIDs: 1e0c0000
+    m_LastClickedID: 3102
+    m_ExpandedIDs: 000000006c0a00002611000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -377,7 +377,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036270000da2d0000
+    m_ExpandedIDs: 000000006c0a000026110000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -421,7 +421,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 3}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -496,9 +496,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4a310000
-      m_LastClickedID: 12618
-      m_ExpandedIDs: 96fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -17.677628, y: 30.28529, z: 160.02602}
+    m_Target: {x: 419.7771, y: -69.35214, z: 357.1107}
     speed: 2
-    m_Value: {x: -17.677628, y: 30.28529, z: 160.02602}
+    m_Value: {x: 419.7771, y: -69.35214, z: 357.1107}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -583,13 +583,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.012556445, y: -0.3659699, z: -0.004938209, w: -0.9305289}
+    m_Target: {x: 0.057425916, y: 0.491022, z: -0.032460418, w: 0.868646}
     speed: 2
-    m_Value: {x: 0.012556445, y: -0.3659699, z: -0.004938209, w: -0.9305289}
+    m_Value: {x: 0.05742592, y: 0.49102202, z: -0.03246042, w: 0.8686461}
   m_Size:
-    m_Target: 283.16187
+    m_Target: 736.8607
     speed: 2
-    m_Value: 283.16187
+    m_Value: 736.8607
   m_Ortho:
     m_Target: 0
     speed: 2
