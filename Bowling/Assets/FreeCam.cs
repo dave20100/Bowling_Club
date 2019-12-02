@@ -54,6 +54,11 @@ public class FreeCam : MonoBehaviour
         var fastMode = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         var movementSpeed = fastMode ? this.fastMovementSpeed : this.movementSpeed;
 
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position = transform.position + (-transform.right * movementSpeed * Time.deltaTime);
