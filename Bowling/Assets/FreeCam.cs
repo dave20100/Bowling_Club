@@ -51,7 +51,7 @@ public class FreeCam : MonoBehaviour
 
     void Update()
     {
-        var fastMode = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        var fastMode = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.Joystick1Button3);
         var movementSpeed = fastMode ? this.fastMovementSpeed : this.movementSpeed;
 
         if (Input.GetKey("escape"))
@@ -112,6 +112,30 @@ public class FreeCam : MonoBehaviour
             var zoomSensitivity = fastMode ? this.fastZoomSensitivity : this.zoomSensitivity;
             transform.position = transform.position + transform.forward * axis * zoomSensitivity;
         }
+
+        if (Input.GetAxis("XboxHorizontal") != 0)
+        {
+            transform.position = transform.position + (transform.right * movementSpeed * Time.deltaTime * Input.GetAxis("XboxHorizontal"));
+        }
+
+        if (Input.GetAxis("XboxVertical") != 0)
+        {
+            transform.position = transform.position + (transform.up * movementSpeed * Time.deltaTime * Input.GetAxis("XboxVertical"));
+        }
+
+        if (Input.GetAxis("XboxAxisZ") != 0)
+        {
+            transform.position = transform.position + (transform.forward * movementSpeed * Time.deltaTime * Input.GetAxis("XboxAxisZ"));
+        }
+
+        if (Input.GetAxis("XboxHorizontal2") != 0 || Input.GetAxis("XboxVertical2") != 0)
+        {
+            float newRotationX = transform.localEulerAngles.y + Input.GetAxis("XboxHorizontal2") * freeLookSensitivity * 0.5f;
+            float newRotationY = transform.localEulerAngles.x - Input.GetAxis("XboxVertical2") * freeLookSensitivity * 0.5f;
+            transform.localEulerAngles = new Vector3(newRotationY, newRotationX, 0f);
+        }
+
+
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {

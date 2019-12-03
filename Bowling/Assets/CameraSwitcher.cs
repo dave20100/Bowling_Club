@@ -36,14 +36,15 @@ public class CameraSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl) && !duringSwitching)
+        if ((Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.Joystick1Button5) 
+            || Input.GetKeyDown(KeyCode.Joystick1Button4)) && !duringSwitching)
         {
             duringSwitching = true;
             clickCounter++;
             DisableAll();
             SwitchCamera(clickCounter % 2);
         }
-        if (Input.GetKeyUp(KeyCode.LeftControl))
+        if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.Joystick1Button5) || Input.GetKeyUp(KeyCode.Joystick1Button4))
         {
             duringSwitching = false;
         }
