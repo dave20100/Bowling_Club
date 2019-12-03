@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\CameraSwitcher.cs" />
      <Compile Include="Assets\FreeCam.cs" />
+     <Compile Include="Assets\GUIScript.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Shasarel/Desktop/Bowling_git/Bowling_Club/Bowling/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
