@@ -6,6 +6,7 @@ public class CameraSwitcher : MonoBehaviour
 {
     public Camera freeCam;
     public Camera pinCam;
+    public Camera playerCamera;
 
     private int clickCounter = 0;
     private bool duringSwitching = true;
@@ -18,6 +19,10 @@ public class CameraSwitcher : MonoBehaviour
         }
         else if (x == 1)
         {
+            playerCamera.enabled = true;
+        }
+        else if (x == 2)
+        {
             pinCam.enabled = true;
         }
     }
@@ -26,6 +31,7 @@ public class CameraSwitcher : MonoBehaviour
     {
         freeCam.enabled = false;
         pinCam.enabled = false;
+        playerCamera.enabled = false;
     }
 
     // Start is called before the first frame update
@@ -42,7 +48,7 @@ public class CameraSwitcher : MonoBehaviour
             duringSwitching = true;
             clickCounter++;
             DisableAll();
-            SwitchCamera(clickCounter % 2);
+            SwitchCamera(clickCounter % 3);
         }
         if (Input.GetKeyUp(KeyCode.LeftControl) || Input.GetKeyUp(KeyCode.Joystick1Button5) || Input.GetKeyUp(KeyCode.Joystick1Button4))
         {
