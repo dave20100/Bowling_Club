@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public BallConfig ballConfig = new BallConfig();
+    static Vector3 startPosition = new Vector3(-127, 14, 15.7f);
+    static Quaternion startRotation = new Quaternion(90f, 0f, 0f, 0f);
+
+    private BallParam _horizontalPosition = new BallParam(startPosition.z - 5, startPosition.z + 5);
+    private BallParam _high = new BallParam(startPosition.y, startPosition.y + 6);
+    private BallParam _angle = new BallParam(-10, 10);
+    private BallParam _streinght = new BallParam(0.0f, 1000.0f);
+    private BallParam _rotationX = new BallParam(-10.0f, 10.0f);
+    private BallParam _rotationY = new BallParam(-10.0f, 10.0f);
+    private BallParam _rotationZ = new BallParam(-10.0f, 10.0f);
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,62 +31,112 @@ public class BallController : MonoBehaviour
     public void Reset()
     {
         GetComponent<Rigidbody>().isKinematic = true;
-        ballConfig = new BallConfig();
+
+        transform.position = startPosition;
+        transform.rotation = startRotation;
+        _high.Value = 1;
+        
     }
 
-    public void Shoot()
+    private void _Shoot()
     {
+        var vForce = Quaternion.AngleAxis(_angle.GetVal(), Vector3.up) * Vector3.right;
+
         GetComponent<Rigidbody>().isKinematic = false;
-        GetComponent<Rigidbody>().AddForce(400 * Vector3.right, ForceMode.Impulse);
-        GetComponent<Rigidbody>().AddTorque(new Vector3(0, 0, 1));
+        GetComponent<Rigidbody>().AddForce(vForce * _streinght.GetVal(), ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddTorque(new Vector3(_rotationX.GetVal(), _rotationY.GetVal(), _rotationZ.GetVal()));
+    }
+
+    public void BallSetup()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            _Shoot();
+        else if (Input.GetKey(KeyCode.L))
+            _horizontalPosition.Value += 1;
+        else if (Input.GetKey(KeyCode.P))
+            _horizontalPosition.Value -= 1;
+        else if (Input.GetKey(KeyCode.O))
+            _high.Value += 1;
+        else if (Input.GetKey(KeyCode.K))
+            _high.Value -= 1;
+        else if (Input.GetKey(KeyCode.I))
+            _angle.Value += 1;
+        else if (Input.GetKey(KeyCode.J))
+            _angle.Value -= 1;
+        else if (Input.GetKey(KeyCode.U))
+            _streinght.Value += 1;
+        else if (Input.GetKey(KeyCode.H))
+            _streinght.Value -= 1;
+        else if (Input.GetKey(KeyCode.Y))
+            _rotationX.Value += 1;
+        else if (Input.GetKey(KeyCode.Y) && Input.GetKey(KeyCode.LeftShift))
+            _rotationX.Value -= 1;
+        else if (Input.GetKey(KeyCode.T))
+            _rotationX.Value += 1;
+        else if (Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.LeftShift))
+            _rotationX.Value -= 1;
+        else if (Input.GetKey(KeyCode.R))
+            _rotationX.Value += 1;
+        else if (Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.LeftShift))
+            _rotationX.Value -= 1;
+
+        else if (Input.GetKey(KeyCode.X))
+            Reset();
+
+        Refresh();
+    }
+
+    public void Refresh()
+    {
+        transform.position = new Vector3(transform.position.x, _high.GetVal(), _horizontalPosition.GetVal());
+    }
+
+    public string GetCoords()
+    {
+        return
+            string.Format(
+                "Horizontal: {0}\n" +
+                "High: {1}\n" +
+                "Angle: {2}\n" +
+                "Streinght: {3}\n" +
+                "Rotation: {4}, {5}, {6}"
+                ,_horizontalPosition.Value
+                ,_high.Value
+                ,_angle.Value
+                ,_streinght.Value
+                ,_rotationX.Value
+                ,_rotationY.Value
+                ,_rotationY.Value);
     }
 }
 
-
-public class BallConfig
+public class BallParam
 {
-    private int horizontalPossition = 0;
-    public int HorizontalPossition
+    private readonly int _step;
+    private readonly float _thresholdDown;
+    private readonly float _thresholdUp;
+    private readonly float _rangeStep;
+    private int _value;
+    public int Value
     {
-        get => horizontalPossition;
+        get { return _value; }
         set
         {
-            horizontalPossition = value > 50 ? 50 :
-                value < -50 ? -50 : value;
+            _value = value > _step ? _step : value < 1 ? 1 : value;
         }
     }
 
-    private int streinght = 0;
-    public int Streinght
+    public BallParam(float thresholdDown, float thresholdUp, int step = 100)
     {
-        get => streinght;
-        set
-        {
-            streinght = value > 50 ? 50 :
-                value < -50 ? -50 : value;
-        }
+        _thresholdDown = thresholdDown;
+        _thresholdUp = thresholdUp;
+        _rangeStep = (thresholdUp - thresholdDown)/(float)step;
+        _step = step;
+        _value = _step / 2;
     }
 
-    private int hight = 0;
-    public int Hight
+    public float GetVal()
     {
-        get => hight;
-        set
-        {
-            hight = value > 100 ? 100 :
-                value < 0 ? 0 : value;
-        }
-    }
-
-    //public object Clone()
-    //{
-    //    return this.MemberwiseClone();
-    //}
-
-    public void Reset()
-    {
-        horizontalPossition = 0;
-        streinght = 0;
-        hight = 0;
+        return (_rangeStep * Value) + _thresholdDown;
     }
 }

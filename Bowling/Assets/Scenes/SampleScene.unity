@@ -34788,6 +34788,7 @@ GameObject:
   - component: {fileID: 1321230487}
   - component: {fileID: 1321230486}
   - component: {fileID: 1321230489}
+  - component: {fileID: 1321230490}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Player
@@ -34874,6 +34875,18 @@ MonoBehaviour:
   freeCam: {fileID: 534669904}
   pinCam: {fileID: 1921993707}
   playerCamera: {fileID: 1321230487}
+--- !u!114 &1321230490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321230485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400dab7d295332946849c662c626ebc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1323405474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53269,6 +53282,7 @@ GameObject:
   - component: {fileID: 1761112761}
   - component: {fileID: 1761112760}
   - component: {fileID: 1761112762}
+  - component: {fileID: 1761112763}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -53342,12 +53356,24 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761112758}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d074bccb4d290af4cbb4a7418f831c20, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.02, y: 0.019999994, z: 0.019999998}
   m_Center: {x: -6.9849193e-10, y: 0, z: -0.000000007450581}
+--- !u!114 &1761112763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761112758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e8baa035da9fe45892210e581ee660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1761155029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7ffc9388d39f54540854786e6e940e38,
@@ -57253,7 +57279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921993704}
   m_LocalRotation: {x: 0.18301274, y: 0.6830127, z: -0.18301274, w: 0.6830127}
-  m_LocalPosition: {x: 47.13, y: 16.36, z: -0.3}
+  m_LocalPosition: {x: 47.13, y: 16.36, z: 16.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62992,6 +63018,8 @@ GameObject:
   - component: {fileID: 578672383556172182}
   - component: {fileID: 578672383555074902}
   - component: {fileID: 578672383553070483}
+  - component: {fileID: 578672383553070484}
+  - component: {fileID: 578672383553070485}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -63015,6 +63043,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
+--- !u!114 &578672383553070484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578672383553070482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e8baa035da9fe45892210e581ee660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &578672383553070485
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578672383553070482}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.9809133
+  m_Center: {x: -0.00000008940697, y: -0.0000009536743, z: -0.004130096}
 --- !u!1 &578672383553070486
 GameObject:
   m_ObjectHideFlags: 0
