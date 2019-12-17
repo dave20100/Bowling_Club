@@ -35,7 +35,7 @@ public class Game : MonoBehaviour
         Rect rect = new Rect(0, 0, w, h * 2 / 100);
         style.alignment = TextAnchor.UpperRight;
         style.fontSize = h * 3 / 100;
-        style.normal.textColor = Color.grey;
+        style.normal.textColor = Color.green;
         GUI.Label(rect, ballConfig, style);
     }
 }

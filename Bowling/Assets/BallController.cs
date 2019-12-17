@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    static Vector3 startPosition = new Vector3(-127, 14, 15.7f);
+    static Vector3 startPosition = new Vector3(-115, 14, 15.7f);
     static Quaternion startRotation = new Quaternion(90f, 0f, 0f, 0f);
 
     private BallParam _horizontalPosition = new BallParam(startPosition.z - 5, startPosition.z + 5);
@@ -69,16 +69,16 @@ public class BallController : MonoBehaviour
             _streinght.Value -= 1;
         else if (Input.GetKey(KeyCode.Y))
             _rotationX.Value += 1;
-        else if (Input.GetKey(KeyCode.Y) && Input.GetKey(KeyCode.LeftShift))
+        else if (Input.GetKey(KeyCode.G))
             _rotationX.Value -= 1;
-        else if (Input.GetKey(KeyCode.T))
-            _rotationX.Value += 1;
-        else if (Input.GetKey(KeyCode.T) && Input.GetKey(KeyCode.LeftShift))
-            _rotationX.Value -= 1;
-        else if (Input.GetKey(KeyCode.R))
-            _rotationX.Value += 1;
-        else if (Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.LeftShift))
-            _rotationX.Value -= 1;
+        else if (Input.GetKey(KeyCode.M))
+            _rotationY.Value += 1;
+        else if (Input.GetKey(KeyCode.N))
+            _rotationY.Value -= 1;
+        else if (Input.GetKey(KeyCode.B))
+            _rotationZ.Value += 1;
+        else if (Input.GetKey(KeyCode.V))
+            _rotationZ.Value -= 1;
 
         else if (Input.GetKey(KeyCode.X))
             Reset();
@@ -106,7 +106,7 @@ public class BallController : MonoBehaviour
                 ,_streinght.Value
                 ,_rotationX.Value
                 ,_rotationY.Value
-                ,_rotationY.Value);
+                ,_rotationZ.Value);
     }
 }
 
