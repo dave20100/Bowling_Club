@@ -51,33 +51,33 @@ public class BallController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
             _Shoot();
-        else if (Input.GetKey(KeyCode.L))
+        else if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadPlus))
             _horizontalPosition.Value += 1;
-        else if (Input.GetKey(KeyCode.P))
+        else if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadMinus))
             _horizontalPosition.Value -= 1;
-        else if (Input.GetKey(KeyCode.O))
+        else if (Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadPlus))
             _high.Value += 1;
-        else if (Input.GetKey(KeyCode.K))
+        else if (Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadMinus))
             _high.Value -= 1;
-        else if (Input.GetKey(KeyCode.I))
+        else if (Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadPlus))
             _angle.Value += 1;
-        else if (Input.GetKey(KeyCode.J))
+        else if (Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadMinus))
             _angle.Value -= 1;
-        else if (Input.GetKey(KeyCode.U))
+        else if (Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadPlus))
             _streinght.Value += 1;
-        else if (Input.GetKey(KeyCode.H))
+        else if (Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadMinus))
             _streinght.Value -= 1;
-        else if (Input.GetKey(KeyCode.Y))
-            _rotationX.Value += 1;
-        else if (Input.GetKey(KeyCode.G))
+        else if (Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadPlus))
+            _rotationX.Value += 1;           
+        else if (Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadMinus))
             _rotationX.Value -= 1;
-        else if (Input.GetKey(KeyCode.M))
+        else if (Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadPlus))
             _rotationY.Value += 1;
-        else if (Input.GetKey(KeyCode.N))
+        else if (Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadMinus))
             _rotationY.Value -= 1;
-        else if (Input.GetKey(KeyCode.B))
+        else if (Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadPlus))
             _rotationZ.Value += 1;
-        else if (Input.GetKey(KeyCode.V))
+        else if (Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadMinus))
             _rotationZ.Value -= 1;
 
         else if (Input.GetKey(KeyCode.X))
