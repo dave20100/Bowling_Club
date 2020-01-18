@@ -17531,7 +17531,7 @@ GameObject:
   - component: {fileID: 661591769}
   m_Layer: 0
   m_Name: MainCameraPreview
-  m_TagString: Untagged
+  m_TagString: cameraPreview
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24773,7 +24773,7 @@ GameObject:
   - component: {fileID: 939247035}
   m_Layer: 0
   m_Name: PlayerCameraPreview
-  m_TagString: Untagged
+  m_TagString: cameraPreview
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32120,7 +32120,7 @@ GameObject:
   - component: {fileID: 1242695932}
   m_Layer: 0
   m_Name: PinCameraPreview
-  m_TagString: Untagged
+  m_TagString: cameraPreview
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,14 +8,18 @@ public class DayNightLight : MonoBehaviour
 
     private Light[] lights;
     private GameObject[] glassArray;
+    private GameObject[] camerasPreview;
     bool isNight;
+    bool isPreviewDisabled;
 
     void Start()
     {
         lights = FindObjectsOfType(typeof(Light)) as Light[];
         glassArray = GameObject.FindGameObjectsWithTag("glass");
+        camerasPreview = GameObject.FindGameObjectsWithTag("cameraPreview");
 
         isNight = false;
+        isPreviewDisabled = true;
     }
 
     // Update is called once per frame
@@ -24,6 +28,22 @@ public class DayNightLight : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             isNight = !isNight;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            isPreviewDisabled = !isPreviewDisabled;
+        }
+
+        foreach (GameObject camera in camerasPreview)
+        {
+            if (isPreviewDisabled)
+            {
+                camera.active = false;
+            }
+            else
+            {
+                camera.active = true;
+            }
         }
 
         foreach (Light light in lights)
@@ -40,7 +60,8 @@ public class DayNightLight : MonoBehaviour
                 {
                     light.intensity = 0;
 
-                }else if(light.name == "SunGlowLight")
+                }
+                else if (light.name == "SunGlowLight")
                 {
                     light.intensity = 0;
                 }
