@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\BallController.cs" />
      <Compile Include="Assets\CameraSwitcher.cs" />
+     <Compile Include="Assets\DayNightLight.cs" />
      <Compile Include="Assets\FreeCam.cs" />
      <Compile Include="Assets\Game.cs" />
      <Compile Include="Assets\GUIScript.cs" />
