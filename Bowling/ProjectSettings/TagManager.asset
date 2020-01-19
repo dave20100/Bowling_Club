@@ -6,6 +6,10 @@ TagManager:
   tags:
   - glass
   - cameraPreview
+  - PinDetectorGame
+  - PinHolder
+  - Pin
+  - curtainGame
   layers:
   - Default
   - TransparentFX

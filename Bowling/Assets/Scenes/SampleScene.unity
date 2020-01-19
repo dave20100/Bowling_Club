@@ -7903,6 +7903,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double_Hung_Window
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.497238
@@ -8079,14 +8087,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8e802bcc6d4a2849a5542a6b6bbe967, type: 2}
-    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
 --- !u!1 &276689634
@@ -15044,7 +15044,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 1f998c8c66bc01841ae4abd0f93dd153, type: 3}
       propertyPath: m_Name
-      value: kurtyna
+      value: curtainGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1f998c8c66bc01841ae4abd0f93dd153, type: 3}
+      propertyPath: m_TagString
+      value: curtainGame
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1f998c8c66bc01841ae4abd0f93dd153, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29296,7 +29300,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1105028954
 GameObject:
@@ -33944,6 +33948,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double_Hung_Window
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.497238
@@ -34120,14 +34132,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8e802bcc6d4a2849a5542a6b6bbe967, type: 2}
-    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
 --- !u!1 &1315641254
@@ -34528,7 +34532,7 @@ Transform:
   m_Children:
   - {fileID: 939247034}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 20, y: 90, z: 0}
 --- !u!114 &1321230489
 MonoBehaviour:
@@ -36523,6 +36527,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double_Hung_Window
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.497238
@@ -36699,14 +36711,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8e802bcc6d4a2849a5542a6b6bbe967, type: 2}
-    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
 --- !u!1 &1369090325
@@ -58815,6 +58819,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1696153605}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988898747 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1f998c8c66bc01841ae4abd0f93dd153,
+    type: 3}
+  m_PrefabInstance: {fileID: 544291676}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1988898748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988898747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852e6fb56f43ec24a8c36a6c4310cfe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1992555086
 GameObject:
   m_ObjectHideFlags: 0
@@ -61397,6 +61419,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Double_Hung_Window
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
+      propertyPath: m_TagString
+      value: glass
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.497238
@@ -61573,14 +61603,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c8e802bcc6d4a2849a5542a6b6bbe967, type: 2}
-    - target: {fileID: 100026, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
-    - target: {fileID: 100028, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
-      propertyPath: m_TagString
-      value: glass
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 926342ca2a580d1409490571bff0b2df, type: 3}
 --- !u!1 &2120227357
