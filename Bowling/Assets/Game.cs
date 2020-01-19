@@ -36,7 +36,7 @@ public class Game : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Z) && state == State.AIM)
         {
-            courtainControler?.MoveCourtine(pinsControler);
+            courtainControler.MoveCourtine(pinsControler);
         }
 
 
@@ -62,7 +62,7 @@ public class Game : MonoBehaviour
                 }
                 break;
             case State.BALLGONE:
-                courtainControler?.MoveCourtine(pinsControler);
+                courtainControler.MoveCourtine(pinsControler);
                 ballController.Reset();
                 state = State.AIM;
                 break;
