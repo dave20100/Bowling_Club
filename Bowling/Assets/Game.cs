@@ -1,34 +1,81 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    BallController ball;
+    BallController ballController;
+    PinsGameControler pinsControler;
+    CourtainControler courtainControler;
     string ballConfig;
+
+    public enum State { WAIT, AIM, SHOOT, COURTAIN, BALLGONE, Length };
+    public State state { get; set; }
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        ball = GameObject.Find("Icosphere").GetComponent<BallController>();
-        ball.Reset();
-        //ball.Setup(ball.transform.position, startRotation);
+        state = State.AIM;
+        ballController = GameObject.Find("Icosphere").GetComponent<BallController>(); // TODO tu można brać kolejene kule jak będą 
+        ballController.Reset();
+        pinsControler = GameObject.Find("PinHolder").GetComponent<PinsGameControler>();
+        courtainControler = GameObject.Find("curtainGame").GetComponent<CourtainControler>();
+    }
+
+    private PinsGameControler GetPins()
+    {
+        return GameObject.Find("PinHolder").GetComponent<PinsGameControler>();
     }
 
     // Update is called once per frame
     void Update()   
     {
-        if (Input.anyKey)
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            ball.BallSetup();
-            ballConfig = ball.GetCoords();
+            ballController.Reset();
+            state = State.AIM;
+        }
+        if (Input.GetKeyDown(KeyCode.Z) && state == State.AIM)
+        {
+            courtainControler.MoveCourtine(pinsControler);
+        }
+
+
+        switch (state)
+        {
+            case State.AIM:
+                if (Input.anyKey)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        ballController.Shoot();
+                        state = State.SHOOT;
+                    }
+
+                    ballController.BallSetup();
+                    ballConfig = ballController.GetCoords();  // print all ball config
+                }
+                break;
+            case State.SHOOT:
+                if (ballController.HasDone())
+                {
+                    state = State.BALLGONE;
+                }
+                break;
+            case State.BALLGONE:
+                courtainControler.MoveCourtine(pinsControler);
+                ballController.Reset();
+                state = State.AIM;
+                break;
+          
+            default:
+                return;
         }
     }
 
     void OnGUI()
     {
         int w = Screen.width, h = Screen.height;
-        ballConfig = ball.GetCoords();
+        ballConfig = ballController.GetCoords();
 
         GUIStyle style = new GUIStyle();
 

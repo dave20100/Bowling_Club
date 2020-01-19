@@ -15,8 +15,6 @@ public class BallController : MonoBehaviour
     private BallParam _rotationY = new BallParam(-10.0f, 10.0f);
     private BallParam _rotationZ = new BallParam(-10.0f, 10.0f);
 
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +36,7 @@ public class BallController : MonoBehaviour
         
     }
 
-    private void _Shoot()
+    public void Shoot()
     {
         var vForce = Quaternion.AngleAxis(_angle.GetVal(), Vector3.up) * Vector3.right;
 
@@ -49,9 +47,7 @@ public class BallController : MonoBehaviour
 
     public void BallSetup()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-            _Shoot();
-        else if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadPlus))
+        if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadPlus))
             _horizontalPosition.Value += 1;
         else if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadMinus))
             _horizontalPosition.Value -= 1;
@@ -80,9 +76,6 @@ public class BallController : MonoBehaviour
         else if (Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadMinus))
             _rotationZ.Value -= 1;
 
-        else if (Input.GetKey(KeyCode.X))
-            Reset();
-
         Refresh();
     }
 
@@ -107,6 +100,11 @@ public class BallController : MonoBehaviour
                 ,_rotationX.Value
                 ,_rotationY.Value
                 ,_rotationZ.Value);
+    }
+
+    public bool HasDone()
+    {
+        return transform.position.y < -2;
     }
 }
 
