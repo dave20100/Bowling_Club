@@ -47,33 +47,33 @@ public class BallController : MonoBehaviour
 
     public void BallSetup()
     {
-        if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadPlus))
+        if ((Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetAxis("XboxHorizontal2") < -0.8))
             _horizontalPosition.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha1) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetAxis("XboxHorizontal2") > 0.8))
             _horizontalPosition.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetAxis("XboxVertical2") > 0.8))
             _high.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha2) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetAxis("XboxVertical2") < -0.8))
             _high.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetKey(KeyCode.JoystickButton2) && Input.GetAxis("XboxHorizontal") > 0.8))
             _angle.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha3) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetKey(KeyCode.JoystickButton2) && Input.GetAxis("XboxHorizontal") < -0.8))
             _angle.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetKey(KeyCode.JoystickButton1) && Input.GetAxis("XboxHorizontal") > 0.8))
             _streinght.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha4) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetKey(KeyCode.JoystickButton1) && Input.GetAxis("XboxHorizontal") < -0.8))
             _streinght.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetKey(KeyCode.JoystickButton3) && (Input.GetAxis("XboxRotationX") > 0.8)))
             _rotationX.Value += 1;           
-        else if (Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha5) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetKey(KeyCode.JoystickButton3) && (Input.GetAxis("XboxRotationX") < -0.8)))
             _rotationX.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadPlus)) || (Input.GetKey(KeyCode.JoystickButton3) && (Input.GetAxis("XboxRotationY") > 0.8)))
             _rotationY.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha6) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetKey(KeyCode.JoystickButton3) && (Input.GetAxis("XboxRotationY") < -0.8)))
             _rotationY.Value -= 1;
-        else if (Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadPlus))
+        else if ((Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadPlus)) || ( Input.GetKey(KeyCode.JoystickButton3) && (Input.GetAxis("XboxAxisZ") > 0.8)))
             _rotationZ.Value += 1;
-        else if (Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadMinus))
+        else if ((Input.GetKey(KeyCode.Alpha7) && Input.GetKey(KeyCode.KeypadMinus)) || (Input.GetKey(KeyCode.JoystickButton3) && Input.GetAxis("XboxAxisZ") < -0.8))
             _rotationZ.Value -= 1;
 
         Refresh();

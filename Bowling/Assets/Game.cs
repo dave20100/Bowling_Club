@@ -45,7 +45,7 @@ public class Game : MonoBehaviour
             case State.AIM:
                 if (Input.anyKey)
                 {
-                    if (Input.GetKeyDown(KeyCode.Space))
+                    if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
                     {
                         ballController.Shoot();
                         state = State.SHOOT;
