@@ -9,11 +9,11 @@ public class BallController : MonoBehaviour
 
     private BallParam _horizontalPosition = new BallParam(startPosition.z - 5, startPosition.z + 5);
     private BallParam _high = new BallParam(startPosition.y, startPosition.y + 6);
-    private BallParam _angle = new BallParam(-10, 10);
-    private BallParam _streinght = new BallParam(0.0f, 1000.0f);
-    private BallParam _rotationX = new BallParam(-10.0f, 10.0f);
-    private BallParam _rotationY = new BallParam(-10.0f, 10.0f);
-    private BallParam _rotationZ = new BallParam(-10.0f, 10.0f);
+    private BallParam _angle = new BallParam(-7, 7);
+    private BallParam _streinght = new BallParam(0.0f, 600.0f);
+    private BallParam _rotationX = new BallParam(-1000.0f, 1000.0f);
+    private BallParam _rotationY = new BallParam(-1000.0f, 1000.0f);
+    private BallParam _rotationZ = new BallParam(-1000.0f, 1000.0f);
 
     // Start is called before the first frame update
     void Start()
